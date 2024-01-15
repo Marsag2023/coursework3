@@ -39,11 +39,9 @@ def test_number():
 
 def test_print():
     """
-
-    :return:
+    тестируем функция вывода результата
     """
     data_cor = {'id': 863064926, 'state': 'EXECUTED', 'date': '2019-12-08T22:46:21.935582',
-     'operationAmount': {'amount': '41096.24', 'currency': {'name': 'USD', 'code': 'USD'}},
-     'description': 'Открытие вклада', 'to': 'Счет 90424923579946435907'}
+                'operationAmount': {'amount': '41096.24', 'currency': {'name': 'USD', 'code': 'USD'}},
+                'description': 'Открытие вклада', 'to': 'Счет 90424923579946435907'}
     print_result(data_cor)
-    #assert print_result(data_cor) == ["08.12.2019 Открытие вклада", " -> Счет **5907", "41096.24 USD"]
