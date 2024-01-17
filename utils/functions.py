@@ -18,11 +18,9 @@ def sort_operations(file_convert):
     сортирует по значению  "EXECUTED" и времени
     возврвщает  пять последних по времени успешные операции
     """
-    print(file_convert)
     operations_good = [i for i in file_convert if i.get('state') == 'EXECUTED']
     operations_good.sort(key=lambda x: x['date'], reverse=True)
     operations_good = operations_good[:5]
-    print(operations_good)
     return operations_good
 
 
