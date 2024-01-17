@@ -1,13 +1,15 @@
 import json
 import os
 from datetime import datetime
+from pathlib import Path
 
 
 def json_operations():
     """
     преобразует исходный файл *.json
     """
-    operations_json = os.path.join('/home/mars/PycharmProjects/coursework3', 'operations.json')
+    root_path = Path(__file__).parent.parent
+    operations_json = root_path.joinpath('operations.json')
     with open(operations_json, 'r', encoding='utf-8') as file:
         operation_convert = json.load(file)
     return operation_convert
